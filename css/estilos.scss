@@ -1,0 +1,209 @@
+/* Importación de archivo colors.scss */
+@import "colors";
+
+/* Declaración de variable para tipo de letra */
+$font-family_1: Arial;
+
+/* Estilos universales de la página */
+* {
+	box-sizing: border-box;
+}
+
+/* Estilos del cuerpo de la página */
+body {
+	font-family: $font-family_1;
+	margin: 0;
+}
+
+/* Encabezado y logo del sitio web */
+.header {
+	padding: 60px;
+	text-align: center;
+	color: $color_1;
+	background-image: url("../img/cammo.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	width: 100%;
+}
+
+/* Estilos de la barra de navegación*/
+.navbar {
+	display: flex;
+	background-color: $background-color_1;
+  /* Estilos de enlaces de la barra de navegación */
+	a {
+		color: $color_1;
+		padding: 14px 20px;
+		text-decoration: none;
+		text-align: center;
+    /* Cambio de color en enlaces durante evento hover */
+		&:hover {
+			background-color: $background-color_2;
+			color: $color_2;
+		}
+	}
+}
+
+/* Contenedor de columnas */
+.row {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+/* Estilos para contenido lateral izquierdo*/
+.side {
+	flex: 30%;
+	background-color: $background-color_3;
+	padding: 20px;
+}
+
+/* Columna principal */
+.main {
+	flex: 70%;
+	background-color: $background-color_4;
+	padding: 20px;
+}
+
+/* Fondo para contenido de valores institucionales */
+.fondo {
+	background-color: $background-color_5;
+	width: 100%;
+	padding: 20px;
+	height: 60px;
+}
+
+/* Estilos para imágenes de encabezado, sección lateral y acerca de nosotros. */
+img {
+	width: 100%;
+	height: 25%;
+}
+
+/* Imágenes de la página de cursos */
+.courseImage {
+	width: 50%;
+	height: auto;
+}
+
+/* Imágenes de la página de fuentes */
+.sourceImage {
+	width: 25%;
+	height: auto;
+}
+
+/* Contenedor de carrusel de contenido de testimonios */
+.slideshow-contenedor {
+	position: relative;
+	background-image: url("../img/experience.png");
+	background-repeat: repeat;
+	background-size: cover;
+	height: 75%;
+}
+
+/* Testimonios */
+.testimonio {
+	display: none;
+	padding: 80px;
+	text-align: center;
+	font-weight: bolder;
+	color: $color_1;
+}
+
+/* Botón para contenido previo del carrusel de testimonios */
+.prev {
+	cursor: pointer;
+	position: absolute;
+	top: 50%;
+	width: auto;
+	margin-top: -30px;
+	padding: 16px;
+	color: $color_1;
+	font-weight: bold;
+	font-size: 20px;
+	border-radius: 0 3px 3px 0;
+	user-select: none;
+  /* En hover, agrega un color de fondo negro con un poco de transparencia. */
+	&:hover {
+		background-color: $background-color_6;
+		color: $color_1;
+	}
+}
+
+/* Botón para contenido siguiente del carrusel de testimonios */
+.next {
+	cursor: pointer;
+	position: absolute;
+	top: 50%;
+	width: auto;
+	margin-top: -30px;
+	padding: 16px;
+	color: $color_1;
+	font-weight: bold;
+	font-size: 20px;
+	border-radius: 0 3px 3px 0;
+	user-select: none;
+	position: absolute;
+	right: 0;
+	border-radius: 3px 0 0 3px;
+  /* En hover, agrega un color de fondo negro con un poco de transparencia. */
+	&:hover {
+		background-color: $background-color_6;
+		color: $color_1;
+	}
+}
+
+/* Contenedor de Indicadores de contenido en la página de testimonios */
+.puntos-contenedor {
+	text-align: center;
+	padding: 20px;
+	background-color: $background-color_1;
+}
+
+/* Indicadores de contenido en la página de testimonios */
+.punto {
+	cursor: pointer;
+	height: 15px;
+	width: 15px;
+	margin: 0 2px;
+	background-color: $background-color_7;
+	border-radius: 50%;
+	display: inline-block;
+	transition: background-color 0.6s ease;
+  /* En hover, agrega un color de fondo negro con un poco de transparencia. */
+	&:hover {
+		background-color: $background-color_8;
+	}
+}
+
+/* Color de fondo para punto activo en carrusel de testimonios */
+.active {
+	background-color: $background-color_8;
+}
+
+/* Estilo de fuente cursiva para todos los testimonios */
+q {
+	font-style: italic;
+}
+
+/* Estilos para texto del autor del testimonio */
+.autor {
+	color: $color_1;
+	font-weight: bolder;
+}
+
+/* Pie de página */
+.footer {
+	padding: 20px;
+	text-align: center;
+	color: $color_1;
+	background-color: $background-color_1;
+}
+
+/* Diseño responsivo: cuando la pantalla tiene menos de 700 píxeles de ancho, las dos columnas se apilan una encima de la otra en lugar de una al lado de la otra. */
+@media screen and (max-width: 700px) {
+	.row {
+		flex-direction: column;
+	}
+	.navbar {
+		flex-direction: column;
+	}
+}
