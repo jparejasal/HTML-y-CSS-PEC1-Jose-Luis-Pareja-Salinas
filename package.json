@@ -4,8 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "parcel src/index.html",
-    "build": "parcel build src/index.html",
+    "start": "parcel src/index.html",    
     "cleanup": "rimraf .parcel-cache dist",
     "dev": "npm run cleanup && parcel src/index.html"   
   },
