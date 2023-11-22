@@ -6,7 +6,8 @@
   "scripts": {
     "start": "parcel src/index.html",
     "cleanup": "rimraf .parcel-cache dist",
-    "dev": "npm run cleanup && parcel src/index.html"
+    "dev": "npm run cleanup && parcel src/index.html",
+    "build": "parcel build src/index.html"
   },
   "keywords": [],
   "author": "",
